@@ -1,0 +1,31 @@
+#Server
+server:
+  port: 8061
+  error:
+    include-message: always
+
+#Common
+logging:
+  level:
+    root: debug
+
+#Spring
+spring:
+  config:
+    activate:
+      on-profile: default
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: name
+  cloud:
+    config:
+      name: name
+#Clients
+service:
+  bki: https://url
+
+#Vault
+##PFX properties
+pfx:
+  passwordPFX: ${passwordPFX}
